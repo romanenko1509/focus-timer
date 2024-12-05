@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue: #0097ff;
+  --green: #3bb76f;
+  --white: #FFF;
+  --black: #000;
+  --background: #000;
+  --text: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #FFF;
+    --text: #000;
+    --green: #006028;
+    --blue: #003d66;
+  }
+}
+
+* {
+  font-family: var(--font-electrolize-regular);
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+}
+
+.button {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.button svg {
+  width: 24px;
+}
+
+.button svg path {
+  transition: fill .3s ease, stroke .3s ease;
+}
+
+.colors-progress {
+  background: var(--blue);
+}
+
+.colors-done {
+  background: var(--green);
+}
+
+.timer {
+  color: var(--text);
+  transition: background .3s ease, color .3s ease;
+}
+
+.timer svg path {
+  stroke: var(--text);
+  fill: var(--text);
+}
